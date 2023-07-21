@@ -6,6 +6,7 @@ import indexRoutes from './routes/index.js'
 
 //Instancia del servidor
 const app = express()
+const PORT = process.env.PORT || 3500;
 
 //Ruta absoluta 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -19,5 +20,6 @@ app.use(indexRoutes)
 app.use(express.static(join(__dirname, 'public')))
 
 
-app.listen(3000) 
-console.log('Server on PORT 3000')
+app.listen(PORT, () => {
+    console.log(`Server on PORT ${PORT}`)
+}) 
