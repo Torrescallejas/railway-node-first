@@ -1,0 +1,52 @@
+body {
+    background: #202020;
+    color: white;
+}
+
+.contenedor {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+.datos-tarjeta {
+    padding: 10px;
+    background-color: #e5e5e5;
+    height: auto;
+    border-radius: 10px;
+    /* width: 400px; */
+}
+
+.dato-name {
+    font-size: 20px;  
+    color: chocolate;  
+}
+
+.dato-titulo {
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+.dato {
+    display: flex;
+    gap: 10px;
+}
+
+.dato p {
+    color: rgb(0, 0, 0);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('./partials/head') %>
+</head>
+<body>
+    <%- include('./partials/navigation') %>
+
+    <main class="container contenedor">
+        <% for (let i = 0; i < data.length; i++) { %>
+        <article class="datos-tarjeta">
+            <div class="titulo-tarjeta">
+                <h3 class="dato-name"> <%= data[i].username %> </h3>
+            </div>
+            <div class="body-tarjeta">
+                <div class="dato">
+                    <h5 class="dato-titulo">Nombre:</h5>
+                    <p> <%= data[i].name %> </p>
+                </div>
+                <div class="dato">
+                    <h5 class="dato-titulo">Correo:</h5>
+                    <p> <%= data[i].email %> </p>
+                </div>
+                <div class="dato">
+                    <h5 class="dato-titulo">Phone Number:</h5>
+                    <p> <%= data[i].phone %> </p>
+                </div>
+            </div>
+        </article>
+        <% } %>
+    </main>
+
+    <%- include('./partials/footer') %>
+</body>
+</html>
